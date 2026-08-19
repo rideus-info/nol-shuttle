@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>놀페스티벌 셔틀 예약 현황</title>
+<meta name="description" content="2026 놀페스티벌(KINTEX) 셔틀버스 일자별·시간대별 예약 현황">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<style>
+:root{
+  --blue:#3B4EE6; --blue-d:#2735BE; --blue-l:#EEF0FE;
+  --lime:#C3E534; --cyan:#4CC3F2; --green:#3BB44A;
+  --cream:#EBE9D2; --ink:#101010; --ink-2:#3A3A38; --mute:#77746E;
+  --line:#DDDCC8; --surf:#FFFFFF;
+  --r:14px; --sh:0 1px 2px rgba(16,16,16,.05), 0 10px 28px -16px rgba(16,16,16,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
+  background:var(--cream); color:var(--ink); line-height:1.6; font-size:15px; letter-spacing:-.01em;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+header{background:var(--blue);color:#fff;padding:14px 0;position:sticky;top:0;z-index:9}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:20px;font-weight:800;line-height:1;letter-spacing:-.005em}
+
+.tag{font-size:12px;font-weight:700;background:var(--lime);color:var(--blue-d);padding:4px 10px;border-radius:99px;letter-spacing:-.01em}
+
+.hero{padding:34px 0 20px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:-.01em;color:var(--blue)}
+h1{font-size:31px;font-weight:800;letter-spacing:-.035em;margin:8px 0 10px;line-height:1.2}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;color:var(--ink-2)}
+.meta b{font-weight:700}
+
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 8px}
+.k{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:15px 16px;box-shadow:var(--sh)}
+.k .l{font-size:12px;font-weight:700;color:var(--mute);letter-spacing:-.01em}
+.k .v{font-size:28px;font-weight:800;letter-spacing:-.04em;margin-top:3px;color:var(--blue)}
+.k .v span{font-size:14px;font-weight:700;color:var(--ink-2);margin-left:2px}
+.k.alt .v{color:var(--ink)}
+
+section{margin:30px 0}
+h2{font-size:19px;font-weight:800;letter-spacing:-.03em;margin-bottom:4px}
+h2 .c{display:inline-block;width:9px;height:9px;border-radius:3px;background:var(--lime);margin-right:8px;vertical-align:2px}
+.lede{font-size:13px;color:var(--mute);margin-bottom:12px}
+
+.card{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.card + .card{margin-top:16px}
+.card-h{padding:13px 18px;background:var(--blue-l);border-bottom:1px solid var(--line);
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.card-h b{font-size:16px;font-weight:800;letter-spacing:-.02em;color:var(--blue-d)}
+.card-h .s{font-size:12.5px;color:var(--mute)}
+
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{padding:9px 10px;text-align:center;font-size:13.5px;
+  border-bottom:1px solid #EDECE0; border-right:1px solid #EDECE0; white-space:nowrap}
+th:last-child,td:last-child{border-right:0}
+td.gsep,th.gsep{border-right:1px solid #C9C7B4}
+thead th{background:#F7F7F1;font-size:12px;font-weight:800;color:var(--ink-2);letter-spacing:-.01em;
+  border-bottom:1px solid var(--line)}
+
+tbody td:first-child{font-weight:700}
+tbody tr:nth-child(even){background:#FCFCF8}
+td.n{color:#C0BEB2}
+td.tot{font-weight:800;background:#FAFAF4}
+tr.sum td{font-weight:800;background:var(--blue-l);color:var(--blue-d);border-bottom:0;
+  border-right-color:#C6CCF5}
+.grand thead th{border-right-color:#6B79EE}
+.grand thead th{background:var(--blue);color:#fff;border-bottom-color:var(--blue)}
+.k .v.sm{font-size:22px}
+
+.stops{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.st{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.st .n{font-size:14.5px;font-weight:800;letter-spacing:-.02em}
+.st .n em{font-style:normal;font-size:11.5px;font-weight:600;color:var(--mute);margin-left:6px}
+.st .d{font-size:13px;color:var(--ink-2);margin-top:3px}
+.st.dest{background:var(--blue);border-color:var(--blue)}
+.st.dest .n,.st.dest .d{color:#fff}
+.st.dest .n em{color:rgba(255,255,255,.75)}
+
+.empty{padding:26px 16px;text-align:center;color:var(--mute);font-size:13.5px}
+footer{margin:38px 0 30px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mute)}
+.fl{display:flex;gap:8px;font-weight:800;color:var(--ink-2);margin-bottom:5px}
+
+@media (max-width:820px){
+  .kpi{grid-template-columns:repeat(2,1fr)}
+  .stops{grid-template-columns:1fr}
+  h1{font-size:25px}
+}
+@media print{
+  body{background:#fff} header{position:static}
+  .card,.k{box-shadow:none} section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <div class="logo">NOL FESTIVAL</div>
+    <div class="tag">관리자용 · 예약 현황</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow" id="evt">&nbsp;</div>
+    <h1>셔틀 예약 현황</h1>
+    <div class="meta">
+      <span>운행기간 <b id="period">—</b></span>
+      <span>장소 <b id="venue">—</b></span>
+      <span>차량 <b id="cap">—</b></span>
+      <span>기준 <b id="stamp">—</b></span>
+    </div>
+  </div>
+
+  <div class="kpi" id="kpi"></div>
+
+  <section>
+    <h2><span class="c"></span>일자별 · 시간대별 현황</h2>
+    <p class="lede">하행선(거점 → 킨텍스) 기준입니다.</p>
+    <div id="board"></div>
+  </section>
+
+  <section>
+    <h2><span class="c"></span>국가별 예약자 현황</h2>
+    <p class="lede">업데이트 예정</p>
+    <div class="card"><div class="tw"><table id="ctry">
+      <thead><tr><th style="width:70px">순위</th><th>국가</th><th style="width:110px">예약자 수</th>
+        <th style="width:90px">비중</th><th style="width:110px">좌석수</th><th style="width:90px">비중</th></tr></thead>
+      <tbody></tbody>
+    </table></div></div>
+  </section>
+
+
+  <footer>
+    <div class="fl"><span>RIDEUS</span><span>·</span><span>GroundK Co., Ltd.</span></div>
+  </footer>
+</div>
+
+<script>
+const DATAFILE = 'shuttle-data.json';
+// 빌드 시 build_site.py 가 아래 줄에 최신 데이터를 심습니다.
+// 로컬(file://)에서 열면 이 내장 데이터로, GitHub에서는 shuttle-data.json 을 우선 사용합니다.
+const EMBED = {"stamp":"2026-08-19 15:45","event":"놀페스티벌(킨텍스)","venue":"킨텍스 제2전시장","period":"2026-10-17 ~ 2026-10-18","capacity":40,"deadline":"2026-10-12","source":"admin.rideus.net/shuttlebus-report/nol (하행선)","stops":[{"ko":"잠실역","en":"Jamsil Stn.","desc":"롯데마트 제타플렉스 잠실점"},{"ko":"합정역","en":"Hapjeong Stn.","desc":"합정역 9번 출구"}],"dest":{"ko":"킨텍스","en":"KINTEX","desc":"T4 주차장 (하차 지점)"},"days":[{"date":"2026-10-17","rows":[{"time":"09:30","cells":{"잠실역":{"pax":4,"seats":4,"buses":1,"none":false},"합정역":{"pax":21,"seats":22,"buses":1,"none":false}},"total":{"pax":25,"seats":26,"buses":2}},{"time":"10:00","cells":{"잠실역":{"pax":4,"seats":4,"buses":1,"none":false},"합정역":{"pax":7,"seats":9,"buses":1,"none":false}},"total":{"pax":11,"seats":13,"buses":2}},{"time":"11:00","cells":{"잠실역":{"pax":7,"seats":8,"buses":1,"none":false},"합정역":{"pax":6,"seats":8,"buses":1,"none":false}},"total":{"pax":13,"seats":16,"buses":2}},{"time":"12:00","cells":{"잠실역":{"pax":0,"seats":0,"buses":0,"none":true},"합정역":{"pax":18,"seats":18,"buses":1,"none":false}},"total":{"pax":18,"seats":18,"buses":1}}],"sub":{"잠실역":{"pax":15,"seats":16,"buses":3},"합정역":{"pax":52,"seats":57,"buses":4},"_":{"pax":67,"seats":73,"buses":7}}},{"date":"2026-10-18","rows":[{"time":"09:30","cells":{"잠실역":{"pax":12,"seats":15,"buses":1,"none":false},"합정역":{"pax":58,"seats":66,"buses":2,"none":false}},"total":{"pax":70,"seats":81,"buses":3}},{"time":"10:00","cells":{"잠실역":{"pax":6,"seats":6,"buses":1,"none":false},"합정역":{"pax":15,"seats":15,"buses":1,"none":false}},"total":{"pax":21,"seats":21,"buses":2}},{"time":"11:00","cells":{"잠실역":{"pax":3,"seats":4,"buses":1,"none":false},"합정역":{"pax":24,"seats":25,"buses":1,"none":false}},"total":{"pax":27,"seats":29,"buses":2}},{"time":"12:00","cells":{"잠실역":{"pax":0,"seats":0,"buses":0,"none":true},"합정역":{"pax":26,"seats":30,"buses":1,"none":false}},"total":{"pax":26,"seats":30,"buses":1}}],"sub":{"잠실역":{"pax":21,"seats":25,"buses":3},"합정역":{"pax":123,"seats":136,"buses":5},"_":{"pax":144,"seats":161,"buses":8}}}],"grand":{"잠실역":{"pax":36,"seats":41,"buses":6},"합정역":{"pax":175,"seats":193,"buses":9},"_":{"pax":211,"seats":234,"buses":15}},"countries":[]}; /*__DATA__*/
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const dlab = d => { const [y,m,dd]=d.split('-');
+  const w=['일','월','화','수','목','금','토'][new Date(+y,+m-1,+dd).getDay()];
+  return `${+m}월 ${+dd}일 (${w})`; };
+
+function ddays(target){                       // 오늘 → 목표일 남은 일수
+  const t = new Date(target + 'T00:00:00');
+  const n = new Date(); n.setHours(0,0,0,0);
+  return Math.round((t - n) / 86400000);
+}
+function kdate(d){                            // '2026-10-12' → ['10월 12일','(월)']
+  const [y,m,dd] = d.split('-');
+  const w = ['일','월','화','수','목','금','토'][new Date(+y,+m-1,+dd).getDay()];
+  return [`${+m}월 ${+dd}일`, `(${w})`];
+}
+function kpi(D){
+  const g = D.grand._;
+  const first = D.days[0].date;
+  const left = ddays(first);
+  const dtxt = left > 0 ? 'D-' + left : (left === 0 ? 'D-DAY' : '종료');
+  const dsub = '';
+  const dl = D.deadline ? kdate(D.deadline) : ['—',''];
+  $('kpi').innerHTML = [
+    ['총 예약자',    g.pax.toLocaleString(), '명',  ''],
+    ['총 예약 좌석', g.seats.toLocaleString(), '석', ''],
+    ['행사까지 남은 기간', dtxt, dsub, ''],
+    ['예약 마감일',  dl[0], dl[1], ' sm'],
+  ].map(([l,v,u,cls])=>
+    `<div class="k"><div class="l">${l}</div>
+      <div class="v${cls}">${v}<span>${u}</span></div></div>`).join('');
+}
+
+function dayCard(D, day){
+  const stops = D.stops.map(s=>s.ko);
+  const head = `<thead>
+    <tr><th rowspan="2" style="width:108px">탑승시간</th>
+      ${stops.map(s=>`<th colspan="2" class="gsep">${esc(s)}</th>`).join('')}
+      <th colspan="2">합계</th></tr>
+    <tr>${stops.map(()=>'<th>예약자</th><th class="gsep">좌석</th>').join('')}
+      <th>예약자</th><th>좌석</th></tr></thead>`;
+  const body = day.rows.map(r=>{
+    const cs = stops.map(s=>{ const c=r.cells[s];
+      return c.none
+        ? '<td class="n">–</td><td class="n gsep">–</td>'
+        : `<td>${c.pax}</td><td class="gsep">${c.seats}</td>`;
+    }).join('');
+    return `<tr><td class="gsep">${esc(r.time)}</td>${cs}
+      <td class="tot">${r.total.pax}</td><td class="tot">${r.total.seats}</td></tr>`;
+  }).join('');
+  const s2 = day.sub;
+  const foot = `<tr class="sum"><td class="gsep">일계</td>
+    ${stops.map(k=>`<td>${s2[k].pax}</td><td class="gsep">${s2[k].seats}</td>`).join('')}
+    <td>${s2._.pax}</td><td>${s2._.seats}</td></tr>`;
+  return `<div class="card">
+    <div class="card-h"><b>${dlab(day.date)}</b>
+      <span class="s">예약자 ${s2._.pax}명 · 좌석 ${s2._.seats}석</span></div>
+    <div class="tw"><table>${head}<tbody>${body}${foot}</tbody></table></div></div>`;
+}
+
+function grandCard(D){
+  const stops = D.stops.map(s=>s.ko), g = D.grand;
+  return `<div class="card grand">
+    <div class="card-h"><b>전체 총계</b><span class="s">${D.period}</span></div>
+    <div class="tw"><table>
+      <thead><tr><th rowspan="2" style="width:108px">구분</th>
+        ${stops.map(s=>`<th colspan="2" class="gsep">${esc(s)}</th>`).join('')}
+        <th colspan="2">합계</th></tr>
+        <tr>${stops.map(()=>'<th>예약자</th><th class="gsep">좌석</th>').join('')}
+          <th>예약자</th><th>좌석</th></tr></thead>
+      <tbody><tr class="sum"><td class="gsep">합계</td>
+        ${stops.map(k=>`<td>${g[k].pax}</td><td class="gsep">${g[k].seats}</td>`).join('')}
+        <td>${g._.pax}</td><td>${g._.seats}</td></tr></tbody>
+    </table></div></div>`;
+}
+
+function countries(D){
+  const tb = $('ctry').querySelector('tbody');
+  if(!D.countries || !D.countries.length){
+    tb.innerHTML = '<tr><td colspan="6" class="empty">업데이트 예정</td></tr>';
+    return;
+  }
+  const tp = D.countries.reduce((a,c)=>a+c.pax,0) || 1;
+  const ts = D.countries.reduce((a,c)=>a+c.seats,0) || 1;
+  tb.innerHTML = D.countries.map((c,i)=>
+    `<tr><td>${i+1}</td><td style="text-align:left">${esc(c.name)}</td>
+      <td>${c.pax}</td><td>${(c.pax/tp*100).toFixed(1)}%</td>
+      <td>${c.seats}</td><td>${(c.seats/ts*100).toFixed(1)}%</td></tr>`).join('');
+}
+
+function fail(){
+  $('board').innerHTML = '<div class="card"><div class="empty">'
+    + '현황 데이터를 불러오지 못했습니다. build_site.py 를 다시 실행해 주세요.</div></div>';
+}
+
+async function boot(){
+  let D = null;
+  try{                                    // 1순위: 최신 JSON (GitHub 게시 시)
+    const res = await fetch(DATAFILE + '?t=' + Date.now(), {cache:'no-store'});
+    if(res.ok){ const j = await res.json(); if(j && j.days) D = j; }
+  }catch(e){ /* file:// 등에서는 무시하고 내장 데이터 사용 */ }
+  if(!D && EMBED && EMBED.days) D = EMBED;   // 2순위: HTML 내장 데이터
+  if(!D){ fail(); return; }
+
+  $('evt').textContent = '놀페스티벌';
+  $('period').textContent = D.period || '—';
+  $('venue').textContent = D.venue || '—';
+  $('cap').textContent = (D.capacity || 40) + '인승 대형버스';
+  $('stamp').textContent = D.stamp || '—';
+  document.title = `놀페스티벌 셔틀 예약 현황 (${D.stamp})`;
+
+  kpi(D);
+  $('board').innerHTML = D.days.map(d=>dayCard(D,d)).join('') + grandCard(D);
+  countries(D);
+}
+boot();
+</script>
+</body>
+</html>
