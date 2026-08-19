@@ -58,7 +58,8 @@ h2 .c{display:inline-block;width:9px;height:9px;border-radius:3px;background:var
 .card-h .s{font-size:12.5px;color:var(--mute)}
 
 .tw{overflow-x:auto}
-table{width:100%;border-collapse:collapse;min-width:640px}
+table{width:100%;border-collapse:collapse;min-width:660px;table-layout:fixed}
+col.tc{width:118px}
 th,td{padding:9px 10px;text-align:center;font-size:13.5px;
   border-bottom:1px solid #EDECE0; border-right:1px solid #EDECE0; white-space:nowrap}
 th:last-child,td:last-child{border-right:0}
@@ -134,8 +135,10 @@ footer{margin:38px 0 30px;padding-top:18px;border-top:1px solid var(--line);font
     <h2><span class="c"></span>국가별 예약자 현황</h2>
     <p class="lede">업데이트 예정</p>
     <div class="card"><div class="tw"><table id="ctry">
-      <thead><tr><th style="width:70px">순위</th><th>국가</th><th style="width:110px">예약자 수</th>
-        <th style="width:90px">비중</th><th style="width:110px">좌석수</th><th style="width:90px">비중</th></tr></thead>
+      <colgroup><col style="width:80px"><col><col style="width:120px"><col style="width:100px">
+        <col style="width:120px"><col style="width:100px"></colgroup>
+      <thead><tr><th>순위</th><th>국가</th><th>예약자 수</th>
+        <th>비중</th><th>좌석수</th><th>비중</th></tr></thead>
       <tbody></tbody>
     </table></div></div>
   </section>
@@ -187,7 +190,7 @@ function kpi(D){
 function dayCard(D, day){
   const stops = D.stops.map(s=>s.ko);
   const head = `<thead>
-    <tr><th rowspan="2" style="width:108px">탑승시간</th>
+    <tr><th rowspan="2">탑승시간</th>
       ${stops.map(s=>`<th colspan="2" class="gsep">${esc(s)}</th>`).join('')}
       <th colspan="2">합계</th></tr>
     <tr>${stops.map(()=>'<th>예약자</th><th class="gsep">좌석</th>').join('')}
@@ -205,18 +208,20 @@ function dayCard(D, day){
   const foot = `<tr class="sum"><td class="gsep">일계</td>
     ${stops.map(k=>`<td>${s2[k].pax}</td><td class="gsep">${s2[k].seats}</td>`).join('')}
     <td>${s2._.pax}</td><td>${s2._.seats}</td></tr>`;
+  const cg = '<colgroup><col class="tc">' + '<col>'.repeat((stops.length+1)*2) + '</colgroup>';
   return `<div class="card">
     <div class="card-h"><b>${dlab(day.date)}</b>
       <span class="s">예약자 ${s2._.pax}명 · 좌석 ${s2._.seats}석</span></div>
-    <div class="tw"><table>${head}<tbody>${body}${foot}</tbody></table></div></div>`;
+    <div class="tw"><table>${cg}${head}<tbody>${body}${foot}</tbody></table></div></div>`;
 }
 
 function grandCard(D){
   const stops = D.stops.map(s=>s.ko), g = D.grand;
+  const cg = '<colgroup><col class="tc">' + '<col>'.repeat((stops.length+1)*2) + '</colgroup>';
   return `<div class="card grand">
     <div class="card-h"><b>전체 총계</b><span class="s">${D.period}</span></div>
-    <div class="tw"><table>
-      <thead><tr><th rowspan="2" style="width:108px">구분</th>
+    <div class="tw"><table>${cg}
+      <thead><tr><th rowspan="2">구분</th>
         ${stops.map(s=>`<th colspan="2" class="gsep">${esc(s)}</th>`).join('')}
         <th colspan="2">합계</th></tr>
         <tr>${stops.map(()=>'<th>예약자</th><th class="gsep">좌석</th>').join('')}
