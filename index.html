@@ -3,375 +3,273 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>2026 GTWS 무주 셔틀 운행 현황 안내</title>
-<meta name="description" content="2026 GTWS 무주 트레일 셔틀버스 노선별 운행 현황 및 모객 현황 안내">
-<meta name="robots" content="noindex">
+<title>놀페스티벌 셔틀 예약 현황</title>
+<meta name="description" content="2026 놀페스티벌(KINTEX) 셔틀버스 일자별·시간대별 예약 현황">
+<meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <style>
 :root{
-  --gold:#FAAE00; --gold-d:#C98C00; --ink:#101010; --ink-2:#3A3A38;
-  --mute:#77746E; --line:#E6E3DD; --line-2:#F0EEE9;
-  --bg:#FBFAF7; --surf:#FFFFFF;
-  --green:#00664B; --green-bg:#E8F2EE;
-  --amber-bg:#FFF6E0;
-  --red:#B3261E; --red-bg:#FBE9E7;
-  --r:14px; --sh:0 1px 2px rgba(16,16,16,.05), 0 8px 24px -12px rgba(16,16,16,.16);
+  --blue:#3B4EE6; --blue-d:#2735BE; --blue-l:#EEF0FE;
+  --lime:#C3E534; --cyan:#4CC3F2; --green:#3BB44A;
+  --cream:#EBE9D2; --ink:#101010; --ink-2:#3A3A38; --mute:#77746E;
+  --line:#DDDCC8; --surf:#FFFFFF;
+  --r:14px; --sh:0 1px 2px rgba(16,16,16,.05), 0 10px 28px -16px rgba(16,16,16,.28);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+html{-webkit-text-size-adjust:100%}
 body{
   font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
-  background:var(--bg); color:var(--ink); line-height:1.6;
-  font-size:15px; letter-spacing:-.01em;
-  -webkit-font-smoothing:antialiased;
+  background:var(--cream); color:var(--ink); line-height:1.6; font-size:15px; letter-spacing:-.01em;
 }
-.wrap{max-width:960px;margin:0 auto;padding:0 18px}
-a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 
-/* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
-  backdrop-filter:saturate(1.6) blur(10px);border-bottom:1px solid var(--line)}
-.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
-.hd img{height:22px;width:auto;display:block}
-.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
-.lang button{font:inherit;font-size:12px;font-weight:700;letter-spacing:.02em;
-  padding:6px 13px;border:0;background:transparent;color:var(--mute);cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+header{background:var(--blue);color:#fff;padding:14px 0;position:sticky;top:0;z-index:9}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:20px;font-weight:800;line-height:1;letter-spacing:-.005em}
 
-/* hero */
-.hero{padding:34px 0 26px;border-bottom:1px solid var(--line)}
-.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d)}
-h1{font-size:clamp(25px,5.4vw,38px);line-height:1.22;letter-spacing:-.03em;font-weight:800;margin:9px 0 12px}
-.sub{color:var(--ink-2);font-size:15px;max-width:56ch}
-.stamp{margin-top:18px;font-size:12.5px;color:var(--mute)}
-.stamp b{color:var(--ink-2);font-weight:600}
+.tag{font-size:12px;font-weight:700;background:var(--lime);color:var(--blue-d);padding:4px 10px;border-radius:99px;letter-spacing:-.01em}
 
-section{padding:30px 0}
-h2{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
-.lede{color:var(--mute);font-size:13.5px;margin-bottom:18px}
+.hero{padding:34px 0 20px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:-.01em;color:var(--blue)}
+h1{font-size:31px;font-weight:800;letter-spacing:-.035em;margin:8px 0 10px;line-height:1.2}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;color:var(--ink-2)}
+.meta b{font-weight:700}
 
-/* policy */
-.policy{background:var(--surf);border:1px solid var(--line);border-left:4px solid var(--gold);
-  border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh)}
-.policy h3{font-size:16px;font-weight:800;margin-bottom:6px;letter-spacing:-.02em}
-.policy .big{font-size:15px;color:var(--ink-2);margin-bottom:16px}
-.policy .big b{color:var(--ink);background:linear-gradient(transparent 58%,#FFE9AE 58%);font-weight:800;padding:0 2px}
-.policy .alert{background:#FFF8E8;border:1px solid #F5DFA6;border-radius:10px;padding:14px 16px;
-  font-size:14px;color:var(--ink-2);margin:12px 0 16px}
-.policy .alert b{color:var(--ink);font-weight:800}
-.pgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));
-  border-top:1px solid var(--line-2);padding-top:16px}
-.pgrid h4{font-size:13px;font-weight:800;color:var(--ink);margin-bottom:6px}
-.pgrid ul{list-style:none;font-size:13.2px;color:var(--ink-2)}
-.pgrid li{padding-left:11px;position:relative;margin-bottom:4px}
-.pgrid li:before{content:"";position:absolute;left:0;top:9px;width:4px;height:4px;
-  border-radius:50%;background:var(--gold)}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 8px}
+.k{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:15px 16px;box-shadow:var(--sh)}
+.k .l{font-size:12px;font-weight:700;color:var(--mute);letter-spacing:-.01em}
+.k .v{font-size:28px;font-weight:800;letter-spacing:-.04em;margin-top:3px;color:var(--blue)}
+.k .v span{font-size:14px;font-weight:700;color:var(--ink-2);margin-left:2px}
+.k.alt .v{color:var(--ink)}
 
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
-.stat{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
-.stat .n{font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
-.stat .l{font-size:12px;color:var(--mute);margin-top:2px}
-.stat.go .n{color:var(--green)} .stat.open .n{color:var(--gold-d)}
+section{margin:30px 0}
+h2{font-size:19px;font-weight:800;letter-spacing:-.03em;margin-bottom:4px}
+h2 .c{display:inline-block;width:9px;height:9px;border-radius:3px;background:var(--lime);margin-right:8px;vertical-align:2px}
+.lede{font-size:13px;color:var(--mute);margin-bottom:12px}
 
-/* controls */
-.ctrl{position:sticky;top:58px;z-index:40;background:var(--bg);
-  padding:12px 0 12px;border-bottom:1px solid var(--line);margin-bottom:20px}
-.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.row+.row{margin-top:9px}
-.seg{display:flex;gap:6px;flex-wrap:wrap}
-.pill{font:inherit;font-size:13.5px;font-weight:700;padding:8px 15px;border-radius:999px;
-  border:1px solid var(--line);background:var(--surf);color:var(--ink-2);cursor:pointer;
-  transition:.13s;white-space:nowrap}
-.pill:hover{border-color:#CFCBC2}
-.pill[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.srch{flex:1;min-width:170px;position:relative}
-.srch input{width:100%;font:inherit;font-size:13.5px;padding:9px 14px 9px 34px;border-radius:999px;
-  border:1px solid var(--line);background:var(--surf);color:var(--ink);outline:none}
-.srch input:focus{border-color:var(--gold);box-shadow:0 0 0 3px #FFF0CC}
-.srch svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.4}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.card + .card{margin-top:16px}
+.card-h{padding:13px 18px;background:var(--blue-l);border-bottom:1px solid var(--line);
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.card-h b{font-size:16px;font-weight:800;letter-spacing:-.02em;color:var(--blue-d)}
+.card-h .s{font-size:12.5px;color:var(--mute)}
 
-/* route grid */
-#list{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));align-items:stretch}
-.rc{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:14px 15px 12px;
-  box-shadow:0 1px 2px rgba(16,16,16,.04)}
-.rc-h{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
-.rc-n{font-size:14.5px;font-weight:800;letter-spacing:-.025em;flex:1;min-width:0}
-.rc-a{font-size:11.5px;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums}
-.rc-a b{color:var(--ink-2);font-weight:700}
-.rc-s{font-size:11px;color:var(--mute);line-height:1.45;margin-bottom:10px;
-  padding-bottom:9px;border-bottom:1px solid var(--line-2)}
-.tr{display:flex;align-items:center;gap:9px;width:100%;padding:5px 0;border:0;background:none;
-  font:inherit;text-align:left;cursor:pointer;color:inherit}
-.tr:hover .tt{color:var(--gold-d)}
-.tt{font-size:13.5px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;
-  min-width:44px;white-space:nowrap}
-.tt .sfx{font-size:9.5px;font-weight:700;color:var(--mute);letter-spacing:0}
-.bar{flex:1;height:6px;border-radius:99px;background:#EFEDE8;overflow:hidden;min-width:34px}
-.bar i{display:block;height:100%;border-radius:99px;background:var(--gold);transition:width .35s}
-.tr.go .bar i{background:var(--green)}
-.pv{font-size:11.5px;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums;
-  min-width:92px;text-align:right}
-.pv b{font-weight:800;color:var(--ink);font-size:12.5px}
-.tr.go .pv b{color:var(--green)}
-.tr.na .pv{color:#C4C0B8}
-.det{display:none;font-size:11.5px;color:var(--ink-2);line-height:1.55;
-  background:#FAF9F6;border-radius:7px;padding:8px 10px;margin:1px 0 5px}
-.det.on{display:block}
-.det .s{color:var(--mute)}
-.det b{font-weight:800;font-variant-numeric:tabular-nums}
-.empty{grid-column:1/-1;text-align:center;padding:44px 20px;color:var(--mute);font-size:14px;
-  background:var(--surf);border:1px dashed var(--line);border-radius:var(--r)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:660px;table-layout:fixed}
+col.tc{width:118px}
+th,td{padding:9px 10px;text-align:center;font-size:13.5px;
+  border-bottom:1px solid #EDECE0; border-right:1px solid #EDECE0; white-space:nowrap}
+th:last-child,td:last-child{border-right:0}
+td.gsep,th.gsep{border-right:1px solid #C9C7B4}
+thead th{background:#F7F7F1;font-size:12px;font-weight:800;color:var(--ink-2);letter-spacing:-.01em;
+  border-bottom:1px solid var(--line)}
 
-/* info + faq */
-.info{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px}
-.info ul{list-style:none}
-.info li{padding-left:13px;position:relative;margin-bottom:8px;font-size:13.8px;color:var(--ink-2)}
-.info li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;
-  border-radius:1px;background:var(--gold)}
-.info li b{color:var(--ink);font-weight:700}
-details{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);
-  margin-bottom:8px;overflow:hidden}
-summary{padding:14px 18px;font-size:14.2px;font-weight:700;cursor:pointer;list-style:none;
-  display:flex;justify-content:space-between;gap:10px;align-items:center}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";font-size:17px;color:var(--mute);font-weight:400;flex:none}
-details[open] summary:after{content:"–"}
-details p{padding:0 18px 15px;font-size:13.6px;color:var(--ink-2)}
+tbody td:first-child{font-weight:700}
+tbody tr:nth-child(even){background:#FCFCF8}
+td.n{color:#C0BEB2}
+td.tot{font-weight:800;background:#FAFAF4}
+tr.sum td{font-weight:800;background:var(--blue-l);color:var(--blue-d);border-bottom:0;
+  border-right-color:#C6CCF5}
+.grand thead th{border-right-color:#6B79EE}
+.grand thead th{background:var(--blue);color:#fff;border-bottom-color:var(--blue)}
+.k .v.sm{font-size:22px}
 
-.cta{background:var(--ink);color:#fff;border-radius:var(--r);padding:26px 24px;text-align:center}
-.cta h3{font-size:18px;font-weight:800;margin-bottom:6px;letter-spacing:-.02em}
-.cta p{color:#B9B6B0;font-size:13.5px;margin-bottom:16px}
-.btn{display:inline-block;background:var(--gold);color:#1A1400;font-weight:800;font-size:14.5px;
-  padding:12px 26px;border-radius:999px;text-decoration:none;letter-spacing:-.01em}
-footer{padding:28px 0 46px;border-top:1px solid var(--line);margin-top:34px;
-  font-size:12.2px;color:var(--mute);text-align:center}
-footer .fl{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:7px;
-  font-weight:700;color:var(--ink-2)}
-[data-en]{display:none}
-html[lang="en"] [data-ko]{display:none}
-html[lang="en"] [data-en]{display:inline}
-html[lang="en"] li[data-en],html[lang="en"] p[data-en],html[lang="en"] div[data-en]{display:block}
-@media(max-width:600px){
-  .stats{grid-template-columns:1fr;gap:8px}
-  .stat{display:flex;align-items:baseline;gap:10px;padding:11px 14px}
-  .stat .n{font-size:20px} .stat .l{margin-top:0}
-  .ctrl{top:58px}
-  #list{grid-template-columns:1fr}
+.stops{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.st{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.st .n{font-size:14.5px;font-weight:800;letter-spacing:-.02em}
+.st .n em{font-style:normal;font-size:11.5px;font-weight:600;color:var(--mute);margin-left:6px}
+.st .d{font-size:13px;color:var(--ink-2);margin-top:3px}
+.st.dest{background:var(--blue);border-color:var(--blue)}
+.st.dest .n,.st.dest .d{color:#fff}
+.st.dest .n em{color:rgba(255,255,255,.75)}
+
+.empty{padding:26px 16px;text-align:center;color:var(--mute);font-size:13.5px}
+footer{margin:38px 0 30px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mute)}
+.fl{display:flex;gap:8px;font-weight:800;color:var(--ink-2);margin-bottom:5px}
+
+@media (max-width:820px){
+  .kpi{grid-template-columns:repeat(2,1fr)}
+  .stops{grid-template-columns:1fr}
+  h1{font-size:25px}
 }
-@media print{.ctrl,.lang,.cta{display:none}}
+@media print{
+  body{background:#fff} header{position:static}
+  .card,.k{box-shadow:none} section{break-inside:avoid}
+}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap hd">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAAtCAYAAACAnD3TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABq4SURBVHhe7Z1/eBRFmse/3T0xk2QSJmSACU4ggVGGZcCJBIkHLEFhyS5wwMo+4gpHPPXEVVfZxZM8h49wxEc88RH34rNk1zvglr3V51BghRUWomFBARFJNCwBghk0QAIxGcgkmWR+1P0xmaG7uqtnMgme92x9nqeeJ/N2Vaerevp9633fqh6BEELA4XA4HE4fEWkBh8PhcDjxwA0Ih8PhcBKCGxAOh8PhJAQ3IBwOh8NJCG5AOBwOh5MQ3IBwOBwOJyG4AeFwOBxOQnADwuFwOJyE4AaEw+FwOAnBDQiHw+FwEkIY6FeZEL8H5NI7IK1HQdrrQLoaAb8HCHgBEgAEA2AwAUlmCEYrBJMDwpAiCMPmQEi2KM91eRdCl3cqZAOBeOsihC5up8VRxHGvqK+l7RhCDZsUMjmipQjCiGW0GKHTz4fHQAMxayqEkQ9HP5MON0jznvDYddSD+JrCY+f3yBoZgSQzkGSGaLIDGc7w/7ZMByTjjXocDodzkxkwA0L8HoRqn0XowpawoegrohGibTHEcS9BMFoBAKG6tQieXkPX7DfS3e8heGQeLY4iTf0Q4pAihSx09mUET61SyOQIQ2bCMHU/LYZ/zxCgp4UWAwCkO8ohjnoC8J5B4ORykJYqukr8JFshjV0DMe8x+giHw+HcFAbGgPguwv+XIqCjnj7Sd1JzkTStCkgdedMMiGF2AwIfToqt2GUEP12K0NfbFDIFKTYkFX+tEJGuRgT25ihkcgwzTgKCgMDBqUDQSx9OCHHMakjfW0eLVbzzzjsAgPvuu48+pEv2s0vRdL2NFgMATq/dhNssVjx0Vx5CwSB9GADw66papGaY8fmp81GZJN2IpIZCBBPGjUJPZzM+27EwKpcj3WLC5PsP0GIOh/MtMyA5kMDxJQNjPACg043A8cVAKAEvpg+ImQW0KArR6Atpr6NFSroaQeShplhtJBOEDCeCJ0oGzHgAQOhMGYjnBC0eELzdXUzjAQC2zCy0Nl9mGo/k1FSkZw5Gd49fIQ8GQ9FiMEgQRRHd3kuKOnKMadm0iMPh/B/QbwNCmvf1L/SiAWk9CnIpPEO+WQhZU2lRFHKtlhbpG4NeVO28Z5SfZQiZBeE8x7Vq+pAaKZwzQpKZPqKJrqfUD9wtV2hRFFumBabkFLRcUnphcoYMD3tjPZQBkZOcnAQA8Hkv0oeiGDPYXh2LyspKJCUlQRAE3RLxzFgcPHgQKSkpqnZ08XiUkwmfz4fMzExVPUEQ8NBDDynqalFaWqpqFymNjdo5Ni0eeOABZGZmqkpOTg4CgfCkbc+ePcw+xhofAMjLy1O1EwQB06ZNo6tGKS0tVV1Tf0t2dna0T5MmTVJdT7wlJSUFOTk5mDVrFp5//nnU1NTQl8+kqamJOR7ykpeXRzfVpKKiQtXPSJk3TxmWnzZtmur/RMrzzz+vqJso/TYgoUvsZDQEA8S85ZCmHYJh1jkYZjeEyz0nIU3YCKTm0i2ihC5tDyvM1FztYrTRTW4gGNT15UUwAIOn0K2iEK/SWJAOd3xeQofSYOgZHTFrKsg1nS9iai4Md+9G0rx2JP19O5LmtiFpbhsM89ohff8QBIsyRyOHeOIwSglwppmtqOxDwl5B43m20RyeZwcA+Hw99KEoybfcAgDounaBPhQlEQ+kvLw8qkz0+PTTT2mRgmeeeQY+n48Wq6ANSHV1tUoWoaCA7Q1HqKrSnqTZbDbYbDrPAsWBAwfg8XhUxWazwWAwROuw+jhlCvu5AYD6+nq43W5aDMToZ1VVleqa+ltyc3NhMBjg9XpRXZ34M+Hz+dDY2IgDBw6grKwMLpcLpaWldDVNHn/8ceZ4yHG73aivV0c+aA4fPqzqZ6Q4nc5oPa/Xi6NHjyraytG7F32h3waEtLIvUrxtJSTXryFapkIw2SGk5obLIBfE0U/D8Hfvh5W5BiFPNcTRTyNpdoNmMUw/RDeJImQ4VfXlRUixQRhcyPzfqnBU+yn5USbkutIDoT8ryJoChLQfUgCQRj0JwTonvGJNhmAwQcyaCqlwB/v6qVDaQFF7ia3U7UPDSv1SA/shsNkdAKAKYckx9nogXdfZD12qeRQt0sXtdmP37t20WJO6OrbRr6ioiFsR0Qr42LFjis9yYilln8/H/L+FhYW0iEl9fT1aWrTzfnKFwlI8ubm5sFrDC1xY6PVz6lRtrz8QCKC2VudZSZDI2NTW1sY1eegL69evx+9//3tarKCiogI7d8a/inTPnj20SAXr3oC6h7H6HOs7Fy/9NyCMJaoAIMqWqGohpDvCilyLTrYCGQgEyQhBLw8iC0fpeRJy6BCWngHRNWAAQhfeBHQ8FCHJDCTrP8wDTe1FtgFx5YSVevPX7PsWMSCdXWzDGQlhdXq+pA9FSemjAamoqNB9mOSwFJnH48GaNfEv6KANyOHDhxWfI5hMJsXMUYvq6mrV+SL0xYDoKffIefprrPQU3OTJk2kR0BvmmTlzJhYsWKBZ9Jg7d66qfqQsWbIEiNFvh8OBkpISzeJyuejqCt566y1aFOXChQt45plnaLEuBw7oLwxpaWnR9VLk46vXZ7vdDotFuU0hUfptQJizXcEAwRQOWegh3roI4sgSdRkRvvk3E8HMNiDycJSWIRAGqb9c8tAX6W5hrvISMpxhA5Aykj4UhbTXwf+BC4GquxFqqFAl6AEAItsA3QzqmtiThXHZIwAADafYRi87dzRCIaIbwkpNMcLv86Dbe5k+BAAQBAkpGexxo/H5fNiyZQstZuJ2uzWV9dq1a9HU1ESLmXi9ypAnKzRWUFAQDR2x0FMGLKWsRTzKXc9YsTwIOax+6oXabDYbduzYoVnWrWOvKLRYLHjvvfdUbSJl4sSJgI7xBoAnn3wSmzdv1iwnT57E4sWL6SZRWOMUCASwZMkSzeOLFy9mKm+90CEAfPTRR7QoCj2+en2OZyIQL/03ICyo0AsLcfTTkO7crFluNvReDzlyo6FlQMRbF9EiRehLq02ESAJfHFwYMzFO2o4iWL0cgT9lI3jiIZC2G8okaXYDkhYSVTHcc1JxjoHA292lG8Jy3pqL9rZWtHta6UNA7wqs4bl2dPm66UNRJElEUpIBHa1sjy9l0EhISam0mMmuXbs0Fb/RaNSc3QYCAVUYq6amBps2qTeRrlrF3hckVwQtLS3MOHg8DzNLGRgMhpizZDms81gsFtjt4cmenrGKFfbw+XxMAxJPP7XQu5544/h6hjNWnyLjooXDEfaoaV5++WXNsbZarXjttdeYhtjn86GyspIWR9HrBz2+rPsAjbr94eYZkP8PZLJnbzFDWENnayr/aDudvEl0BZhogDQ2zrBIyIfQV1sQqCpE4IN8hM69GvZyviVOXGC7zvYh2bCYMnC2+jh9KEqO3QHJYEBnF9uAmNJSAAAdbWfpQ1HSMm+nRbps3LiRFgEAFixYgJkzZ9JiAMCpU8p7t3r1atXMsKCgAPfff79CJqejoyP6t97MMZ6HmaUMnE4nTKb4Jmper5cZnpMrYi3Fhz6E2lihwniVPY2e0oznnI2NjcxVarH61NzcjG3b2Csate5/TU0NysrKaDHQ+120Wq0oKmJPXPXCWKzQIqix0JuwAIh6ZgPBt2ZAyLVa+Hdn9qncbIQUG3MlWCQcxVqBJaQ7IGRofPl6Q1+aRqcXQWa4xNFPQxqzWnE8FuRaNYK1KxHYm4Pg0YUgzfvoKgPO4fq/0qIohaPCM7H6z9n7T+wTwl/azk62i56aEn4Vy/Ur7DBY+hCNMWdQU1PDVECPPfYYxo0bR4sBKpG+a9cuzQT8m2++SYsUyA0O6xoQxwxYTxnEY3winDhxgqnc5edhXWt/Q23Tp0+nRXHBuh7EGb7Tuyan0wmDwYBTp05h69at2Lp1KyoqKvDqq6/iqaeegsvlYo79okWLVJ6Ez+dDSUmJarKB3tBVxODojYXWdy2C3ljI76HehMVoNPbJa43Ft2ZAQAI33usUb/kWEFlJ/K5GIOjT9iRScyEYTBDS1S5sJHTFNCC3WFS5IfF762CYVgVhqPaMmEnIh9DlnQh8XIzA/rEgjW/TNQaMqrNf0KIohaPGAADOnPyEPhTl9vy7AADt3k76UJTU1GSQUCCGAZlAi5iwch92ux1FRUXM2Wdkpu7z+bBy5Ur6MJYvX4477riDFiuQKxHWzNHhcDDj4RH0lEE8M/AIesonooj1ZuvxGCuW95Ko0vJ4PEyvCXFeE8t7g6x9WVlZNHG+fPlyrFy5EuXl5ZqhTwAoKirC5s3qEHtpaanmvTabzXjttdein51OJ/O+19fXaybKa2tr4WEsAzcYDAqvQu9eu1wuGI0D9868b8+AfEfR21AYulataQginoeWBxIJYWm1A8L7P7QQLNNhmLIfhtkNkG5f1ecVVsRbh8DxxQieim99el/w+Xtw9Evt/gDA9NvGw9fZoUigi5KEkWPGwT7hTowcMw5jJ94NABhiMWNQRhokSZKdARAEAWmpKehoO4dgj9rjQ+8rTFLNo2mxJh6PRzNvAQCPPPII0Bv710rsRpRWRUWF6mE2mUx44YUXFDIt5A8764GmZ7BasNoiDu9FTjyKVG+2Ho+yZl1rokpL73riXUnEuibIxl+vjhyHw4EtW7Zg//79qtDhwYMHmeHSDRs2KJY/GwwG3XuvlQc5cYLt3TscDsX16PUnnvvYF7gB0dlQiI7zqk2F6A1fAQDS1SEQ4q0L5yZ82jM5PYMFAEJqLsRxL4U3XN69G4J1bvgNvHESOrt+wHfxf3T+NLzdSrc8N2sYptq/hzXzfgrnrSNxtvo4UtMzYJ9wJ+Ysexw/e6kc6ZmD0d4WTqqnZw4GAAy1mDF0SCbsecNx22gbRuQMQ1paCgab0yFJIq41HUe6xYn0oXcga8Q9EKXwxkIAGDRsIgRRaXhYbN26VTOUYDQasWzZjbcmayVC3W433G63ZpK8rKws5l4I9CbjEWPmGM/DzFIGFotF89pZsLwDl8sFszmcy2P9L8RhrPS8F72Yvx7xGD09AoGA7jkiXiTrugGgpKQEO3fuRENDA06fPo1ly5apQnmR0JUWRUVFePhh9XYGvTHRCmPp3Rv5WMTqs57hSgRuQDKc4VeFaNFep7maKuqBaISw0NUIaLSJknXjQSRtxxCqW6tZhK4LEKxzYLj7vbBXMm49M19DE7qgHbpJlL2nTsCakQlzShpcOaNQPO5OBIJBmJJTMHNsODQxzDYSKzb+J/K/PwsXztRi5282wjI8B8bUNIwrvPEKC0EQkJpiREvrdTQ1t+L69Q74/X6YTOEEek9XKyBKGO74CXLueBiTfrIX42a9geFjF8OSNyt6nliwwlfFxcUKA6AVxgoEAli4cKHKALlcLjz2WHxvO44s49V77UWsMJjH42EqDj0FRFNTU8MMxxQXF0f/Zikem80Wc7avtwlO/j/6AsvoIU4DUltbq1pOHUG+8ozlOaA3qe1yuZCby372WLvNjUajZqgLMfIgVVVVqnwV63sAaizq6uqYfcYAJ9BxUw1IgOpEugOGGSdVRcxbrqz3bSMamJsZQ9drQbzqeGTE8xBSbJorsUIXGbkI0QhRtn+EtB5F8PQazSIPgQlGK8TbnwvvwJ+yF0K2evmpnFCbtiJIlIenzMLJ1b/C5Vd+hw9/8RJ+u/TnWPmDhTAmJSEQDMHf7cPnH1fhf974N/g6O/CjZY/j+/Pvx+WGeqRnDsbEGbMRCARxqq4BtacbcPqsG+3eTpjSUjBs6GCMsFkxKMMEEgrAd70RgiCh8YutEAQJUlIqBlknYkT+48jKmUFfmiaVlZWasWj05i/kaBkQMPIWZWVlcYdiIg8xHQKToxei8Xg8eOCBB1RGLEJkk1wsWlpaNPM4EeT7HFgz8aamJpw/f+PtyTQnTpxgbrLMzc3VVZZ6sAwa4lSEevkjudJ94oknNL1N9I5JcXExUym//fbbzMnKxo0bmYZHLw/i9XoV1663gg592EBotVqZ15Mo/TcgrNk7CSh2qQuSEYLZpSrM3dh9CNv0F5YBIVcPaG4GlHseWnmQ0CXt1xcIZle/f/RJGDobhsIdMEw9wB47jWtOlIueb/BG1R7UXGyAp7MDe774BK9/8Ed4u32YO+EuTBk9FgTAsBF5yLE7cOLDvaj//DNcqDuF7Dw7/mHVixiTPxmhEMGQLDPS01JgMBiQmpKMYCiIzq5uSKIASRLha/8KqZmjEAp0IWPYHTj38To0HH8Vzed2oKVhX9zhq/LycloE9M6k7733XoVszJjwAoBYLFiwAHPmzKHFTCIzSJaSQO8mtvz8fMybNw8LFy6MlmnTpiEvLw979+6lmwAAZs6cifnz5+PYsWOKdpHywx/+EDNmzEB+fj6ys7OZS0MXL16s8IK08kHo7YvT6cS0adPw6KOPYsWKFVixYgWWLl2K8ePHo6CggOnhsJa0xkLvtStGozGuBQTxztoBYN26dZg7d65CFqGurk7TI21qamLuNi8qKtL1VmPlQeRhLL0VdPRSZL0+e71e5Ofnx1VmzIhvsgbST/yVLtLzLjRL8Hw5XV1BKNBF/AecqnY974L0/NlBV1cQ6mhQt+kt/koXXV2XYPN+1TmYZW+uom3gs0fUdRglULtK0Tb45SZVnUgJnlmvqKtFz95cVbtIicX27dvJ9u3babGKwpd+QYw/W0Asv3iALN9WTo67zxJ/IKCoU/PRh+TDd/+bnK+tJkfe30WeLr6LPDghm/z7Py8n9Z+fiNbr7PKR6+0dxO8PkOvtHcT9VRP5rOYsuXK1jQQDPnL+6Mvk/NH15JuvD0bbtF08Qr48toG0t/w1KtPj8uXLxGg0EgCqsmqVcvwJIaS9vV1Vjy5Go5GcO3eObkpOnjypqhspJSUlhBBC2traiNVqVR1PtBQUFJCrV68SQghZvXq16ni8xeVykfb2dkV/du/erarXn7JmzRrF+fvCtm3bVOeLlMLCQrq6Jg6HQ9U2Ut5//326Ounq6iIFBQWqupESuacRFixYoKqD3u/L6dOnFXW12LBhg6ptpLhcN3TY+vXrVccjpbi4WHFOp9OpqpNImTlzpuK8LPrtgei9Tyr4xUoEa58FubIPxFMdLaHWowh9tRXBwzM0cwwAIGZpewU3AyGzgD2bp6A9DvqzHvSS4cgvL2oRPL0GofOvh/ehyH8bJRT27EJfvsF+X1icuZJYVNbVwDooE2/903M4t+63eGnhMuz54jieensTXt63Hd7uLnhariDdPBgTi2bjP9auxLubNmDKnPswa/FDGDlmHG4dPQY9/gAuXroKfyD8OyFfX7yCb9quAyAYOiQTlqxBAADz8EJ0d17BxS/+C1cb9iLo74QgSrh1fAlMWWOpq9OmoqJCNVOMoDUjNJlMMd365cuX6+5I1iIS8jCbzTh06FBCy1jlmM1mrFmzBocOHYp6NXohHhZGoxErV67EkSNHVCuJ5syZgy1btkST6olit9uxffv2uFarsdCbSdPegxYtLS2qNwrI0TqH0WjEjh07mN+HLVu24MUXXwRivCixrKwsrgUOeqG96urqaEhR7z7Lv1exlj33hXi/r/3+RUJytRKBw33cvxAH4RVI7JAB6XQjsE/7HfrCIFefX+cRqBzPNGZyxNtWQnK+Ev0cunIAwY/iS+4afnRV8VvrpKsx3IdEfgJYB3FkScxXwcTzi4SvV/4R2z87jMa2Fng6O+Dzh99hNXfCXXhyxjxMv92Jqxe/RvWhAxgyPAeOgrthTE2jT4Or33jQ2taO5FuSYDBI8Pl60OP3Y1CGCZbBGUhOvrHSCgB83sto/epDeC5/gvaWWlhv/zFG5v9MUYfF0qVLNWP5LpdLsRZfTmlpKVNhWa1WbN68WTP34Xa7sWLFCloM9Cqo5557TiE7fPgwKisrUVdXB7fbjaampuiruNEb1jCZTLBarbBarbDZbHA4HCgsLMT06dNVq3/mzZsX7avRaFRdY0RmsVhgtVrhdDoxe/bsmAbC4/Fgz549qK6uRl1dHRobG9HS0gKPxxM1jEajMXqtNpsNdrsdDocDkydPjiu8FItJkyYxFefOnTsxf/58Wqxg3759msl7k8mEwsJC7N+v/vnpCPX19Zg1a5ZmYhy9BqKsrExzolJUVIT9+/er7pUWgUAAeXl5zPxKeXk5HnzwQYwfP17zOw0A27Zti4ZWWX1OhN27d8cVsu23AQGAwF+mgXzDXjHRV4TBhTBMP0KLFQy0AQlWP45Qg/a+ATnSxC0QR9xYBhrrZ2ujpNmR9INztBSBT34CclHnN1X6imhEUtFRYJD+Cp94DAgAvPint1H2p7fg8/thH5KNmWNdMEgSXrnvH2FMuqH4z3/xGS411OM21yR4rjThm+bLmDLnxwCAUCgEQoAuXzeutnggSRLSUsPKLmtwRrhOsBtX6t9D1zU3enytMGdPQnJaNggJYpC1AKKUHP1fHA7nu0G/Q1gAIE36w4CFTZCaC6ngD7T0psNKpKug9n6wVmLR0OGrCNL41wZu7AQDDJO2xTQefeFffnQ/9v78X5GbNRT1Vy9j01/eh8NqUxgPAPB1dmDnbzbinxd8H2UP3wd/z43ZmSiKkCQRAX8Q3T1+tHs70XjpClKMN84hSsmwjlmErJH3ou3iEZw/+jJOf/BLiNIt3HhwON9RBsQDAcKvLw/9tRShr7bp/lASE8EAMWcJROcrijAPi4H2QEiHG4E/a59PjmFeOwTqTcPxeGDSnW8yfx+FdLcgdPZFhL7clNjYARAsRZCc6xXv2RpIWrzX8ejvfgVXzii8MPen9GEAQGvzJby59lmMyb8L8x99mj4M9P6Y1FdfN2OIxQzzIO0VfD7vZdR/vA7ZjkXIGnEPfZjD4XxHGDADEoH4msJJ85YqkPY6kM7G8Hut5C8klEyAwQQhLReCyQHBMhXC0Nnh2XycEL8H5PzrtDhMshVinjphGovQmRf18xGSCeJtv6SlIJfeiZk/EUY+HLN/xO8BadoT/k14r2zsQr5wIj3oVY5dmh3C4EII1jkQBsqL4XA4nDgZcAPC4XA4nL8NBiQHwuFwOJy/PbgB4XA4HE5CcAPC4XA4nITgBoTD4XA4CcENCIfD4XASghsQDofD4SQENyAcDofDSQhuQDgcDoeTEP8Lp+MUmlpOLUIAAAAASUVORK5CYII=" alt="GTWS | MUJU TRAIL">
-    <div class="lang" role="group">
-      <button id="btnKo" aria-pressed="true" onclick="setLang('ko')">KO</button>
-      <button id="btnEn" aria-pressed="false" onclick="setLang('en')">EN</button>
-    </div>
+    <div class="logo">NOL FESTIVAL</div>
+    <div class="tag">관리자용 · 예약 현황</div>
   </div>
 </header>
 
 <div class="wrap">
 
   <div class="hero">
-    <div class="eyebrow">2026 Golden Trail World Series · Muju</div>
-    <h1><span data-ko>셔틀 운행 현황 안내</span><span data-en>Shuttle Service Status</span></h1>
-    <p class="sub">
-      <span data-ko>노선별 모객 현황과 정확한 탑승 시각을 확인하실 수 있습니다. 예약하신 편의 운행 여부는 이 페이지에서 상시 확인해 주십시오.</span>
-      <span data-en>Check the current booking status and exact departure times for each route. Please refer to this page for the operating status of your reserved shuttle.</span>
-    </p>
-    <p class="stamp"><span data-ko>예약 현황 기준</span><span data-en>Booking data as of</span> <b id="stamp">—</b></p>
+    <div class="eyebrow" id="evt">&nbsp;</div>
+    <h1>셔틀 예약 현황</h1>
+    <div class="meta">
+      <span>운행기간 <b id="period">—</b></span>
+      <span>장소 <b id="venue">—</b></span>
+      <span>차량 <b id="cap">—</b></span>
+      <span>기준 <b id="stamp">—</b></span>
+    </div>
   </div>
 
+  <div class="kpi" id="kpi"></div>
+
   <section>
-    <div class="policy">
-      <h3><span data-ko>운행 기준 안내</span><span data-en>Operating Policy</span></h3>
-      <p class="alert">
-        <span data-ko><b>8월 30일(일) 자정</b>을 기준으로 예약 인원이 최소 모객 인원(30명)의 <b>50%인 15명에 미치지 못하는 노선</b>은 운행이 취소(폐지)됩니다.</span>
-        <span data-en>Routes with fewer than <b>15 bookings — 50% of the 30-passenger minimum — as of midnight on Sunday, 30 August</b> will be cancelled.</span>
-      </p>
-      <div class="pgrid">
-        <div>
-          <h4><span data-ko>운행 취소 시</span><span data-en>If a departure is cancelled</span></h4>
-          <ul>
-            <li data-ko>해당 편의 예약은 일괄 취소 처리됩니다.</li>
-            <li data-ko>결제하신 수단으로 <b>영업일 기준 5일(D+5) 이내 전액 환불</b>됩니다.</li>
-            <li data-ko>별도의 환불 신청 절차는 필요하지 않습니다.</li>
-            <li data-en>All reservations for that departure are cancelled together.</li>
-            <li data-en>A <b>full refund</b> is issued to your original payment method <b>within 5 business days</b>.</li>
-            <li data-en>No separate refund request is required.</li>
-          </ul>
-        </div>
-        <div>
-          <h4><span data-ko>예약자 직접 취소</span><span data-en>Cancelling your own booking</span></h4>
-          <ul>
-            <li data-ko><b>탑승일 30일 전까지</b> 취소 시 전액 환불됩니다.</li>
-            <li data-ko>탑승일 <b>30일 이내</b> 취소분은 환불되지 않으며, 부분 환불도 적용되지 않습니다.</li>
-            <li data-en>Cancel <b>up to 30 days before</b> your travel date for a full refund.</li>
-            <li data-en>Cancellations <b>within 30 days</b> of travel are non-refundable. Partial refunds do not apply.</li>
-          </ul>
-        </div>
-        <div>
-          <h4><span data-ko>노선 폐지·취소 안내 이후</span><span data-en>After a cancellation notice</span></h4>
-          <ul>
-            <li data-ko>안내를 받으신 뒤 직접 취소하지 않으신 예약은 당사에서 일괄 취소 처리합니다.</li>
-            <li data-ko>이 경우에도 위 <b>운행 취소 시</b> 기준에 따라 전액 환불됩니다.</li>
-            <li data-en>If you do not cancel after receiving a cancellation notice, we will cancel the booking on your behalf.</li>
-            <li data-en>The full refund terms above still apply in this case.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="board">
-    <h2><span data-ko>노선별 운행 현황</span><span data-en>Status by Route</span></h2>
-    <p class="lede">
-      <span data-ko>날짜와 방향을 선택하면 해당 노선의 회차별 출발 시각과 모객 현황이 표시됩니다.</span>
-      <span data-en>Select a date and direction to see departure times and booking status for each trip.</span>
-    </p>
-
-    <div class="ctrl">
-      <div class="row">
-        <div class="seg" id="segDate"></div>
-      </div>
-      <div class="row">
-        <div class="seg" id="segDir"></div>
-        <div class="srch">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
-          <input id="q" type="search" autocomplete="off">
-        </div>
-      </div>
-    </div>
-
-    <div id="list"></div>
+    <h2><span class="c"></span>일자별 · 시간대별 현황</h2>
+    <p class="lede">하행선(거점 → 킨텍스) 기준입니다.</p>
+    <div id="board"></div>
   </section>
 
   <section>
-    <div class="cta">
-      <h3><span data-ko>셔틀 관련 문의</span><span data-en>Shuttle Enquiries</span></h3>
-      <p><span data-ko>예약 변경·취소, 운행 여부 등 모든 문의는 아래 메일로만 접수받고 있습니다. 예약번호를 함께 기재해 주시면 더 빠르게 확인해 드립니다.</span><span data-en>All enquiries — booking changes, cancellations, and service status — are handled by email only. Including your booking number helps us respond faster.</span></p>
-      <a class="btn" href="mailto:ops@rideus.net?subject=[2026%20GTWS%20무주%20셔틀]%20문의">ops@rideus.net</a>
-    </div>
+    <h2><span class="c"></span>국가별 예약자 현황</h2>
+    <p class="lede">업데이트 예정</p>
+    <div class="card"><div class="tw"><table id="ctry">
+      <colgroup><col style="width:80px"><col><col style="width:120px"><col style="width:100px">
+        <col style="width:120px"><col style="width:100px"></colgroup>
+      <thead><tr><th>순위</th><th>국가</th><th>예약자 수</th>
+        <th>비중</th><th>좌석수</th><th>비중</th></tr></thead>
+      <tbody></tbody>
+    </table></div></div>
   </section>
+
 
   <footer>
     <div class="fl"><span>RIDEUS</span><span>·</span><span>GroundK Co., Ltd.</span></div>
-    <div><span data-ko>2026 GTWS 무주 트레일 셔틀버스 운영</span><span data-en>Shuttle operations for 2026 GTWS Muju Trail</span></div>
-    <div style="margin-top:6px"><span data-ko>본 페이지의 모객 현황은 안내 목적으로 제공되며, 운행 확정·취소는 개별 안내를 기준으로 합니다.</span><span data-en>Information on this page is provided for guidance; individual notifications are the basis for confirmed operation or cancellation.</span></div>
   </footer>
 </div>
 
 <script>
 const DATAFILE = 'shuttle-data.json';
-let DATA = {"stamp":"2026-09-01 00:05","min":30,"dates":["10/23","10/24","10/25"],"trips":[{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":1,"stops":[{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"13:00","te":"13:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"14:10","te":"14:10"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":2,"stops":[{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"20:00","te":"20:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:10","te":"21:10"}],"pax":4,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":1,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"10:30","te":"10:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:55","te":"10:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":2,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"13:00","te":"13:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"13:25","te":"13:25"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":3,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"14:30","te":"14:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"14:55","te":"14:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":4,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"17:30","te":"17:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"17:55","te":"17:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":5,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"20:00","te":"20:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"20:25","te":"20:25"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":1,"stops":[{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"13:00","te":"13:00"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"14:00","te":"14:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:30","te":"15:30"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":2,"stops":[{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"20:00","te":"20:00"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"21:00","te":"21:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:30","te":"22:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":1,"stops":[{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"13:00","te":"13:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":2,"stops":[{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"20:00","te":"20:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:00","te":"22:00"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":1,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"12:00","te":"12:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:30","te":"15:30"}],"pax":23,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":2,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"15:00","te":"15:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"18:30","te":"18:30"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":3,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"19:00","te":"19:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:30","te":"22:30"}],"pax":7,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":4,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"23:00","te":"23:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"02:30","te":"02:30"}],"pax":7,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":1,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"12:00","te":"12:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"12:20","te":"12:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":10,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":2,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"15:00","te":"15:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"15:20","te":"15:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"18:00","te":"18:00"}],"pax":4,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":3,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"19:00","te":"19:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"19:20","te":"19:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:00","te":"22:00"}],"pax":21,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":4,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"23:30","te":"23:30"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"23:50","te":"23:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"02:30","te":"02:30"}],"pax":4,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":1,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"12:00","te":"12:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":2,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"19:00","te":"19:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:00","te":"22:00"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":3,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"23:30","te":"23:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"02:30","te":"02:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":1,"stops":[{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"12:00","te":"12:00"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"12:20","te":"12:20"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"12:50","te":"12:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:50","te":"15:50"}],"pax":5,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":2,"stops":[{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"19:00","te":"19:00"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"19:20","te":"19:20"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"19:50","te":"19:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:50","te":"22:50"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":1,"stops":[{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"12:00","te":"12:00"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"12:20","te":"12:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:30","te":"15:30"}],"pax":9,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":2,"stops":[{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"19:00","te":"19:00"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"19:20","te":"19:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:30","te":"22:30"}],"pax":4,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":1,"stops":[{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"12:00","te":"12:00"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"12:25","te":"12:25"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":2,"stops":[{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"19:00","te":"19:00"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"19:25","te":"19:25"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:00","te":"22:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":1,"stops":[{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"11:00","te":"11:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"14:00","te":"14:00"}],"pax":8,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":2,"stops":[{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"19:00","te":"19:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:00","te":"22:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":1,"stops":[{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"11:00","te":"11:00"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"12:40","te":"12:40"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"14:30","te":"14:30"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":2,"stops":[{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"19:00","te":"19:00"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"20:40","te":"20:40"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"22:30","te":"22:30"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":1,"stops":[{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"11:00","te":"11:00"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"12:40","te":"12:40"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:30","te":"15:30"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/23","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":2,"stops":[{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"19:00","te":"19:00"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"20:40","te":"20:40"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"23:30","te":"23:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":1,"stops":[{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"02:20","te":"02:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":2,"stops":[{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"09:00","te":"09:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:10","te":"10:10"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":3,"stops":[{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"14:30","te":"14:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:40","te":"15:40"}],"pax":4,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":1,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"03:05","te":"03:05"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":2,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"09:00","te":"09:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:25","te":"09:25"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":3,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"10:30","te":"10:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:55","te":"10:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":4,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"13:00","te":"13:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"13:25","te":"13:25"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":5,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"15:00","te":"15:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:25","te":"15:25"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":6,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"17:30","te":"17:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"17:55","te":"17:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":7,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"20:00","te":"20:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"20:25","te":"20:25"}],"pax":2,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":1,"stops":[{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"01:00","te":"01:00"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"02:00","te":"02:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":2,"stops":[{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"07:00","te":"07:00"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"08:00","te":"08:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:30","te":"09:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":3,"stops":[{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"13:00","te":"13:00"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"14:00","te":"14:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:30","te":"15:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":1,"stops":[{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"01:30","te":"01:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":2,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":2,"stops":[{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"08:00","te":"08:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":2,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":3,"stops":[{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"13:00","te":"13:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":1,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"00:00","te":"00:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":6,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":2,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"06:00","te":"06:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:30","te":"09:30"}],"pax":7,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":3,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"07:00","te":"07:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:30","te":"10:30"}],"pax":7,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":4,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"12:00","te":"12:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:30","te":"15:30"}],"pax":22,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":5,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"15:00","te":"15:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"18:30","te":"18:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":1,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"00:30","te":"00:30"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"00:50","te":"00:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":4,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":2,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"06:00","te":"06:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"06:20","te":"06:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:00","te":"09:00"}],"pax":11,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":3,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"07:00","te":"07:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"07:20","te":"07:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":8,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":4,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"12:00","te":"12:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"12:20","te":"12:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":6,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":5,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"15:00","te":"15:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"15:20","te":"15:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"18:00","te":"18:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":1,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"00:30","te":"00:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":2,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":2,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"06:00","te":"06:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:00","te":"09:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":3,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"07:00","te":"07:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":2,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":4,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"12:00","te":"12:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":5,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"15:00","te":"15:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"18:00","te":"18:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":1,"stops":[{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"00:00","te":"00:00"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"00:20","te":"00:20"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"00:50","te":"00:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:50","te":"03:50"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":2,"stops":[{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"06:10","te":"06:10"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"06:30","te":"06:30"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"07:00","te":"07:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":4,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":3,"stops":[{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"11:10","te":"11:10"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"11:30","te":"11:30"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"12:00","te":"12:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":1,"stops":[{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"00:00","te":"00:00"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"00:20","te":"00:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":2,"stops":[{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"06:30","te":"06:30"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"06:50","te":"06:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":5,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":3,"stops":[{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"11:30","te":"11:30"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"11:50","te":"11:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":4,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":1,"stops":[{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"00:30","te":"00:30"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"00:55","te":"00:55"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":2,"stops":[{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"07:00","te":"07:00"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"07:25","te":"07:25"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":3,"stops":[{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"12:00","te":"12:00"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"12:25","te":"12:25"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":1,"stops":[{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"00:30","te":"00:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":2,"stops":[{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"07:00","te":"07:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":3,"stops":[{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"12:00","te":"12:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":1,"stops":[{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"00:00","te":"00:00"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"01:40","te":"01:40"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":2,"stops":[{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"06:30","te":"06:30"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"08:10","te":"08:10"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":3,"stops":[{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"11:30","te":"11:30"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"13:10","te":"13:10"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":2,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":1,"stops":[{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"23:00(23일 출발)","te":"23:00 (Oct 23)"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"00:40","te":"00:40"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":2,"stops":[{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"05:30","te":"05:30"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"07:10","te":"07:10"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":3,"stops":[{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"10:30","te":"10:30"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"12:10","te":"12:10"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":1,"stops":[{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"03:00","te":"03:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"04:10","te":"04:10"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":2,"stops":[{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"09:00","te":"09:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:10","te":"10:10"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":1,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"03:05","te":"03:05"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":2,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"09:00","te":"09:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:25","te":"09:25"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":3,"stops":[{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"10:30","te":"10:30"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:55","te":"10:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":1,"stops":[{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"01:00","te":"01:00"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"02:00","te":"02:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":2,"stops":[{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"07:00","te":"07:00"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"08:00","te":"08:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:30","te":"09:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":1,"stops":[{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"02:00","te":"02:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"04:00","te":"04:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":2,"stops":[{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"08:00","te":"08:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":1,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"01:00","te":"01:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"04:30","te":"04:30"}],"pax":2,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":2,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"06:00","te":"06:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:30","te":"09:30"}],"pax":10,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":3,"stops":[{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"07:00","te":"07:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:30","te":"10:30"}],"pax":7,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":1,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"01:00","te":"01:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"01:20","te":"01:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"04:00","te":"04:00"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":2,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"06:00","te":"06:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"06:20","te":"06:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:00","te":"09:00"}],"pax":19,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":3,"stops":[{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"07:00","te":"07:00"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"07:20","te":"07:20"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":5,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":1,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"01:00","te":"01:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"04:00","te":"04:00"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":2,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"06:00","te":"06:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"09:00","te":"09:00"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":3,"stops":[{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"07:00","te":"07:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":1,"stops":[{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"00:00","te":"00:00"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"00:20","te":"00:20"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"00:50","te":"00:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:50","te":"03:50"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":2,"stops":[{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"06:10","te":"06:10"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"06:30","te":"06:30"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"07:00","te":"07:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":3,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":1,"stops":[{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"00:30","te":"00:30"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"00:50","te":"00:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"04:00","te":"04:00"}],"pax":2,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":2,"stops":[{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"06:30","te":"06:30"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"06:50","te":"06:50"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":6,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":1,"stops":[{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"01:00","te":"01:00"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"01:25","te":"01:25"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"04:00","te":"04:00"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":2,"stops":[{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"07:00","te":"07:00"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"07:25","te":"07:25"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":1,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":1,"stops":[{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"01:00","te":"01:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"04:00","te":"04:00"}],"pax":4,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":2,"stops":[{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"07:00","te":"07:00"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":2,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":1,"stops":[{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"00:30","te":"00:30"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"02:10","te":"02:10"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"04:00","te":"04:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":2,"stops":[{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"06:30","te":"06:30"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"08:10","te":"08:10"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":1,"stops":[{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"23:00(24일 출발)","te":"23:00 (Oct 24)"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"00:40","te":"00:40"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"03:30","te":"03:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"out","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":2,"stops":[{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"05:30","te":"05:30"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"07:10","te":"07:10"},{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"10:00","te":"10:00"}],"pax":1,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"},{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"16:10","te":"16:10"}],"pax":16,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"17:00","te":"17:00"},{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"18:10","te":"18:10"}],"pax":6,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":3,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:30","te":"19:30"},{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"20:40","te":"20:40"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":4,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:30","te":"21:30"},{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"22:40","te":"22:40"}],"pax":2,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:30","te":"19:30"},{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"19:55","te":"19:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:30","te":"21:30"},{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"21:55","te":"21:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:30","te":"19:30"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"21:00","te":"21:00"},{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"22:00","te":"22:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:30","te":"21:30"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"23:00","te":"23:00"},{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"00:00(익일)","te":"00:00 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:30","te":"19:30"},{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"21:30","te":"21:30"}],"pax":2,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:30","te":"21:30"},{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"23:30","te":"23:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"22:45","te":"22:45"}],"pax":16,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"00:45(익일)","te":"00:45 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"21:55","te":"21:55"},{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"22:15","te":"22:15"}],"pax":35,"rate":true,"status":"go"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"23:55","te":"23:55"},{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"00:15(익일)","te":"00:15 (+1d)"}],"pax":6,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"22:15","te":"22:15"}],"pax":8,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"00:15(익일)","te":"00:15 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"22:15","te":"22:15"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"22:45","te":"22:45"},{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"23:05","te":"23:05"}],"pax":9,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"00:15(익일)","te":"00:15 (+1d)"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"00:45(익일)","te":"00:45 (+1d)"},{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"01:05(익일)","te":"01:05 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"22:25","te":"22:25"},{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"22:45","te":"22:45"}],"pax":1,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"00:25(익일)","te":"00:25 (+1d)"},{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"00:45(익일)","te":"00:45 (+1d)"}],"pax":2,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"21:50","te":"21:50"},{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"22:15","te":"22:15"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"23:50","te":"23:50"},{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"00:15(익일)","te":"00:15 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:00","te":"19:00"},{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"22:00","te":"22:00"}],"pax":7,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:00","te":"21:00"},{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"00:00(익일)","te":"00:00 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:00","te":"19:00"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"20:50","te":"20:50"},{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"22:30","te":"22:30"}],"pax":5,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:00","te":"21:00"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"22:50","te":"22:50"},{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"00:30(익일)","te":"00:30 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:00","te":"19:00"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"21:50","te":"21:50"},{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"23:30","te":"23:30"}],"pax":1,"rate":true,"status":"open"},{"dir":"ret","date":"10/24","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:00","te":"21:00"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"23:50","te":"23:50"},{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"01:30(익일)","te":"01:30 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"15:00","te":"15:00"},{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"16:10","te":"16:10"}],"pax":11,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"17:00","te":"17:00"},{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"18:10","te":"18:10"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":3,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:30","te":"19:30"},{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"20:40","te":"20:40"}],"pax":1,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"대전 노선","routeEn":"Daejeon","hoe":4,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:30","te":"21:30"},{"ko":"KTX대전역","en":"Daejeon KTX Stn.","t":"22:40","te":"22:40"}],"pax":3,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:30","te":"19:30"},{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"19:55","te":"19:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"무주터미널 노선","routeEn":"Muju Terminal","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:30","te":"21:30"},{"ko":"무주공용터미널 맞은편 폭포 광장","en":"Muju Bus Terminal (Waterfall Plaza)","t":"21:55","te":"21:55"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:30","te":"19:30"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"21:00","te":"21:00"},{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"22:00","te":"22:00"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"천안/세종 노선","routeEn":"Cheonan / Sejong","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:30","te":"21:30"},{"ko":"세종 BRT환승센터 맞은편","en":"Sejong BRT Transfer Center","t":"23:00","te":"23:00"},{"ko":"천안 신세계백화점","en":"Cheonan Shinsegae Dept. Store","t":"00:00(익일)","te":"00:00 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:30","te":"19:30"},{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"21:30","te":"21:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"중부권","zoneEn":"Central","route":"광주 노선","routeEn":"Gwangju","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:30","te":"21:30"},{"ko":"광주 유스퀘어 맞은편","en":"Gwangju U-Square (opposite)","t":"23:30","te":"23:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"22:45","te":"22:45"}],"pax":34,"rate":true,"status":"go"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"서울역 노선","routeEn":"Seoul Station","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"서울역 13번 출구","en":"Seoul Stn. Exit 13","t":"00:45(익일)","te":"00:45 (+1d)"}],"pax":22,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"21:55","te":"21:55"},{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"22:15","te":"22:15"}],"pax":26,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"종합운동장역/천호역 노선","routeEn":"Sports Complex / Cheonho","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"천호역 7번 출구","en":"Cheonho Stn. Exit 7","t":"23:55","te":"23:55"},{"ko":"종합운동장역 7번 출구","en":"Sports Complex Stn. Exit 7","t":"00:15(익일)","te":"00:15 (+1d)"}],"pax":17,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"22:15","te":"22:15"}],"pax":4,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"상봉역 노선","routeEn":"Sangbong Stn.","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"상봉역 1번 출구","en":"Sangbong Stn. Exit 1","t":"00:15(익일)","te":"00:15 (+1d)"}],"pax":1,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"22:15","te":"22:15"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"22:45","te":"22:45"},{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"23:05","te":"23:05"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"인천 노선","routeEn":"Incheon","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"원인재역 1번 출구","en":"Woninjae Stn. Exit 1","t":"00:15(익일)","te":"00:15 (+1d)"},{"ko":"인천국제공항 T1","en":"Incheon Airport T1","t":"00:45(익일)","te":"00:45 (+1d)"},{"ko":"인천국제공항 T2","en":"Incheon Airport T2","t":"01:05(익일)","te":"01:05 (+1d)"}],"pax":5,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"22:25","te":"22:25"},{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"22:45","te":"22:45"}],"pax":5,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"고양/김포 노선","routeEn":"Goyang / Gimpo","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"김포국제공항 국제선","en":"Gimpo Airport Intl. Terminal","t":"00:25(익일)","te":"00:25 (+1d)"},{"ko":"백석역 2번 출구","en":"Baekseok Stn. Exit 2","t":"00:45(익일)","te":"00:45 (+1d)"}],"pax":8,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:15","te":"19:15"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"21:50","te":"21:50"},{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"22:15","te":"22:15"}],"pax":1,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"수도권","zoneEn":"Metropolitan","route":"의정부/남양주 노선","routeEn":"Uijeongbu / Namyangju","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:15","te":"21:15"},{"ko":"별내역 2번 출구","en":"Byeollae Stn. Exit 2","t":"23:50","te":"23:50"},{"ko":"의정부역 지하상가 6번 출구","en":"Uijeongbu Stn. Exit 6","t":"00:15(익일)","te":"00:15 (+1d)"}],"pax":1,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:00","te":"19:00"},{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"22:00","te":"22:00"}],"pax":4,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"부산 노선","routeEn":"Busan","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:00","te":"21:00"},{"ko":"부산역 지하철 4번 출구","en":"Busan Stn. Subway Exit 4","t":"00:00(익일)","te":"00:00 (+1d)"}],"pax":2,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:00","te":"19:00"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"20:50","te":"20:50"},{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"22:30","te":"22:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"울산/대구 노선","routeEn":"Ulsan / Daegu","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:00","te":"21:00"},{"ko":"대구 콘서트하우스","en":"Daegu Concert House","t":"22:50","te":"22:50"},{"ko":"울산 태화로터리","en":"Ulsan Taehwa Rotary","t":"00:30(익일)","te":"00:30 (+1d)"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":1,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"19:00","te":"19:00"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"21:50","te":"21:50"},{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"23:30","te":"23:30"}],"pax":0,"rate":true,"status":"open"},{"dir":"ret","date":"10/25","zone":"동부권","zoneEn":"Eastern","route":"강릉/원주 노선","routeEn":"Gangneung / Wonju","hoe":2,"stops":[{"ko":"무주덕유산리조트","en":"Muju Deogyusan Resort","t":"21:00","te":"21:00"},{"ko":"원주 치악예술관","en":"Wonju Chiak Art Hall","t":"23:50","te":"23:50"},{"ko":"KTX강릉역","en":"Gangneung KTX Stn.","t":"01:30(익일)","te":"01:30 (+1d)"}],"pax":2,"rate":true,"status":"open"}],"meta":{"total":169,"go":2,"open":167,"sch":0}};
-const T = {
-  ko:{ out:'무주행', ret:'귀가행', trip:'회차', ph:'정류장·노선 검색 (예: 서울역)',
-       go:'운행 확정', open:'예약 가능', off:'운행 취소', sch:'운행 예정',
-       pax:'명', of:'/ 30명', none:'해당 조건의 운행 편이 없습니다.',
-       trips:'편', ret_none:'10월 23일은 귀가행을 운행하지 않습니다.' },
-  en:{ out:'To Muju', ret:'Return', trip:'Trip', ph:'Search stop or route (e.g. Seoul)',
-       go:'Confirmed', open:'Booking open', off:'Cancelled', sch:'Scheduled',
-       pax:' pax', of:' / 30', none:'No departures match this selection.',
-       trips:' trips', ret_none:'No return service operates on October 23.' }
-};
-let L='ko', D='10/23', DIR='out', Q='';
-
+// 빌드 시 build_site.py 가 아래 줄에 최신 데이터를 심습니다.
+// 로컬(file://)에서 열면 이 내장 데이터로, GitHub에서는 shuttle-data.json 을 우선 사용합니다.
+const EMBED = {"stamp":"2026-08-31 09:02","event":"놀페스티벌(킨텍스)","venue":"킨텍스 제2전시장","period":"2026-10-17 ~ 2026-10-18","capacity":40,"deadline":"2026-10-12","source":"admin.rideus.net/shuttlebus-report/nol (하행선)","stops":[{"ko":"잠실역","en":"Jamsil Stn.","desc":"롯데마트 제타플렉스 잠실점"},{"ko":"합정역","en":"Hapjeong Stn.","desc":"합정역 9번 출구"}],"dest":{"ko":"킨텍스","en":"KINTEX","desc":"T4 주차장 (하차 지점)"},"days":[{"date":"2026-10-17","rows":[{"time":"09:30","cells":{"잠실역":{"pax":4,"seats":4,"buses":1,"none":false},"합정역":{"pax":30,"seats":31,"buses":1,"none":false}},"total":{"pax":34,"seats":35,"buses":2}},{"time":"10:00","cells":{"잠실역":{"pax":5,"seats":5,"buses":1,"none":false},"합정역":{"pax":9,"seats":11,"buses":1,"none":false}},"total":{"pax":14,"seats":16,"buses":2}},{"time":"11:00","cells":{"잠실역":{"pax":18,"seats":19,"buses":1,"none":false},"합정역":{"pax":8,"seats":10,"buses":1,"none":false}},"total":{"pax":26,"seats":29,"buses":2}},{"time":"12:00","cells":{"잠실역":{"pax":0,"seats":0,"buses":0,"none":true},"합정역":{"pax":38,"seats":42,"buses":2,"none":false}},"total":{"pax":38,"seats":42,"buses":2}}],"sub":{"잠실역":{"pax":27,"seats":28,"buses":3},"합정역":{"pax":85,"seats":94,"buses":5},"_":{"pax":112,"seats":122,"buses":8}}},{"date":"2026-10-18","rows":[{"time":"09:30","cells":{"잠실역":{"pax":14,"seats":16,"buses":1,"none":false},"합정역":{"pax":63,"seats":72,"buses":2,"none":false}},"total":{"pax":77,"seats":88,"buses":3}},{"time":"10:00","cells":{"잠실역":{"pax":6,"seats":6,"buses":1,"none":false},"합정역":{"pax":20,"seats":20,"buses":1,"none":false}},"total":{"pax":26,"seats":26,"buses":2}},{"time":"11:00","cells":{"잠실역":{"pax":6,"seats":8,"buses":1,"none":false},"합정역":{"pax":26,"seats":27,"buses":1,"none":false}},"total":{"pax":32,"seats":35,"buses":2}},{"time":"12:00","cells":{"잠실역":{"pax":0,"seats":0,"buses":0,"none":true},"합정역":{"pax":39,"seats":44,"buses":2,"none":false}},"total":{"pax":39,"seats":44,"buses":2}}],"sub":{"잠실역":{"pax":26,"seats":30,"buses":3},"합정역":{"pax":148,"seats":163,"buses":6},"_":{"pax":174,"seats":193,"buses":9}}}],"grand":{"잠실역":{"pax":53,"seats":58,"buses":6},"합정역":{"pax":233,"seats":257,"buses":11},"_":{"pax":286,"seats":315,"buses":17}},"countries":[]}; /*__DATA__*/
+const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const tfmt = t => esc(t).replace(/\s*(\(.+\))$/, '<span class="sfx">$1</span>');
-const dlabel = (d,l) => l==='ko' ? d.replace('/','월 ')+'일' : 'Oct '+d.split('/')[1];
+const dlab = d => { const [y,m,dd]=d.split('-');
+  const w=['일','월','화','수','목','금','토'][new Date(+y,+m-1,+dd).getDay()];
+  return `${+m}월 ${+dd}일 (${w})`; };
 
-function setLang(l){
-  L=l; document.documentElement.lang=l;
-  if(DATA) document.getElementById('stamp').textContent = DATA.stamp;
-  btnKo.setAttribute('aria-pressed', l==='ko'); btnEn.setAttribute('aria-pressed', l==='en');
-  q.placeholder = T[l].ph;
-  build();
+function ddays(target){                       // 오늘 → 목표일 남은 일수
+  const t = new Date(target + 'T00:00:00');
+  const n = new Date(); n.setHours(0,0,0,0);
+  return Math.round((t - n) / 86400000);
 }
-function build(){
-  if(!DATA) return;
-  segDate.innerHTML = DATA.dates.map(d=>
-    `<button class="pill" aria-pressed="${d===D}" onclick="pick('D','${d}')">${dlabel(d,L)}</button>`).join('');
-  segDir.innerHTML = ['out','ret'].map(k=>
-    `<button class="pill" aria-pressed="${k===DIR}" onclick="pick('DIR','${k}')">${T[L][k]}</button>`).join('');
-  render();
+function kdate(d){                            // '2026-10-12' → ['10월 12일','(월)']
+  const [y,m,dd] = d.split('-');
+  const w = ['일','월','화','수','목','금','토'][new Date(+y,+m-1,+dd).getDay()];
+  return [`${+m}월 ${+dd}일`, `(${w})`];
 }
-function pick(k,v){ if(k==='D')D=v; else DIR=v; build(); }
-q.addEventListener('input', e=>{ Q=e.target.value.trim().toLowerCase(); render(); });
+function kpi(D){
+  const g = D.grand._;
+  const first = D.days[0].date;
+  const left = ddays(first);
+  const dtxt = left > 0 ? 'D-' + left : (left === 0 ? 'D-DAY' : '종료');
+  const dsub = '';
+  const dl = D.deadline ? kdate(D.deadline) : ['—',''];
+  $('kpi').innerHTML = [
+    ['총 예약자',    g.pax.toLocaleString(), '명',  ''],
+    ['총 예약 좌석', g.seats.toLocaleString(), '석', ''],
+    ['행사까지 남은 기간', dtxt, dsub, ''],
+    ['예약 마감일',  dl[0], dl[1], ' sm'],
+  ].map(([l,v,u,cls])=>
+    `<div class="k"><div class="l">${l}</div>
+      <div class="v${cls}">${v}<span>${u}</span></div></div>`).join('');
+}
 
-function render(){
-  if(!DATA) return;
-  const rows = DATA.trips.filter(t=>{
-    if(t.date!==D || t.dir!==DIR) return false;
-    if(!Q) return true;
-    const hay = [t.route,t.routeEn,...t.stops.map(s=>s.ko),...t.stops.map(s=>s.en)].join(' ').toLowerCase();
-    return hay.includes(Q);
-  });
-
-  if(!rows.length){
-    const msg = (DIR==='ret' && D==='10/23' && !Q) ? T[L].ret_none : T[L].none;
-    list.innerHTML = `<div class="empty">${msg}</div>`; return;
-  }
-  const groups=[];
-  rows.forEach(t=>{
-    let g=groups.find(g=>g.route===t.route);
-    if(!g){ g={route:t.route,routeEn:t.routeEn,zone:t.zone,zoneEn:t.zoneEn,items:[]}; groups.push(g); }
-    g.items.push(t);
-  });
-  list.innerHTML = groups.map((g,gi)=>{
-    const name = L==='ko' ? g.route : g.routeEn;
-    const items = g.items.sort((a,b)=>a.hoe-b.hoe);
-    // 승차 정류장 목록 (도착지 제외 / 귀가행은 출발지 제외)
-    const st = items[0].stops;
-    const via = (items[0].dir==='out' ? st.slice(0,-1) : st.slice(1))
-      .map(x=>L==='ko'?x.ko:x.en).join(' · ');
-    const rows = items.map((t,ti)=>{
-      const raw = t.rate ? t.pax/DATA.min*100 : 0;
-      const pct = Math.min(100, raw);
-      const cls = t.rate ? (t.status==='go'?'go':'') : 'na';
-      const head = t.stops[0];
-      const pv = t.rate
-        ? `<b>${t.pax}${L==='ko'?'명':''}</b>${T[L].of} · ${Math.round(raw)}%`
-        : '&mdash;';
-      const path = t.stops.map((x,i)=>
-        `${i?' <span class="s">&#9656;</span> ':''}<b>${tfmt(L==='ko'?x.t:(x.te||x.t))}</b> <span class="s">${esc(L==='ko'?x.ko:x.en)}</span>`
-      ).join('');
-      return `<button class="tr ${cls}" onclick="tog(${gi},${ti})">
-          <span class="tt">${tfmt(L==='ko'?head.t:(head.te||head.t))}</span>
-          <span class="bar"><i style="width:${pct}%"></i></span>
-          <span class="pv">${pv}</span>
-        </button>
-        <div class="det" id="d${gi}_${ti}">${L==='ko'?t.hoe+'회차':'Trip '+t.hoe} &nbsp;${path}</div>`;
+function dayCard(D, day){
+  const stops = D.stops.map(s=>s.ko);
+  const head = `<thead>
+    <tr><th rowspan="2">탑승시간</th>
+      ${stops.map(s=>`<th colspan="2" class="gsep">${esc(s)}</th>`).join('')}
+      <th colspan="2">합계</th></tr>
+    <tr>${stops.map(()=>'<th>예약자</th><th class="gsep">좌석</th>').join('')}
+      <th>예약자</th><th>좌석</th></tr></thead>`;
+  const body = day.rows.map(r=>{
+    const cs = stops.map(s=>{ const c=r.cells[s];
+      return c.none
+        ? '<td class="n">–</td><td class="n gsep">–</td>'
+        : `<td>${c.pax}</td><td class="gsep">${c.seats}</td>`;
     }).join('');
-    return `<div class="rc">
-      <div class="rc-h"><span class="rc-n">${esc(name)}</span></div>
-      <div class="rc-s">${esc(via)}</div>
-      ${rows}</div>`;
+    return `<tr><td class="gsep">${esc(r.time)}</td>${cs}
+      <td class="tot">${r.total.pax}</td><td class="tot">${r.total.seats}</td></tr>`;
   }).join('');
+  const s2 = day.sub;
+  const foot = `<tr class="sum"><td class="gsep">일계</td>
+    ${stops.map(k=>`<td>${s2[k].pax}</td><td class="gsep">${s2[k].seats}</td>`).join('')}
+    <td>${s2._.pax}</td><td>${s2._.seats}</td></tr>`;
+  const cg = '<colgroup><col class="tc">' + '<col>'.repeat((stops.length+1)*2) + '</colgroup>';
+  return `<div class="card">
+    <div class="card-h"><b>${dlab(day.date)}</b>
+      <span class="s">예약자 ${s2._.pax}명 · 좌석 ${s2._.seats}석</span></div>
+    <div class="tw"><table>${cg}${head}<tbody>${body}${foot}</tbody></table></div></div>`;
 }
-function tog(g,t){ document.getElementById('d'+g+'_'+t).classList.toggle('on'); }
+
+function grandCard(D){
+  const stops = D.stops.map(s=>s.ko), g = D.grand;
+  const cg = '<colgroup><col class="tc">' + '<col>'.repeat((stops.length+1)*2) + '</colgroup>';
+  return `<div class="card grand">
+    <div class="card-h"><b>전체 총계</b><span class="s">${D.period}</span></div>
+    <div class="tw"><table>${cg}
+      <thead><tr><th rowspan="2">구분</th>
+        ${stops.map(s=>`<th colspan="2" class="gsep">${esc(s)}</th>`).join('')}
+        <th colspan="2">합계</th></tr>
+        <tr>${stops.map(()=>'<th>예약자</th><th class="gsep">좌석</th>').join('')}
+          <th>예약자</th><th>좌석</th></tr></thead>
+      <tbody><tr class="sum"><td class="gsep">합계</td>
+        ${stops.map(k=>`<td>${g[k].pax}</td><td class="gsep">${g[k].seats}</td>`).join('')}
+        <td>${g._.pax}</td><td>${g._.seats}</td></tr></tbody>
+    </table></div></div>`;
+}
+
+function countries(D){
+  const tb = $('ctry').querySelector('tbody');
+  if(!D.countries || !D.countries.length){
+    tb.innerHTML = '<tr><td colspan="6" class="empty">업데이트 예정</td></tr>';
+    return;
+  }
+  const tp = D.countries.reduce((a,c)=>a+c.pax,0) || 1;
+  const ts = D.countries.reduce((a,c)=>a+c.seats,0) || 1;
+  tb.innerHTML = D.countries.map((c,i)=>
+    `<tr><td>${i+1}</td><td style="text-align:left">${esc(c.name)}</td>
+      <td>${c.pax}</td><td>${(c.pax/tp*100).toFixed(1)}%</td>
+      <td>${c.seats}</td><td>${(c.seats/ts*100).toFixed(1)}%</td></tr>`).join('');
+}
 
 function fail(){
-  list.innerHTML = '<div class="empty">'
-    + '<div>현황 정보를 불러오지 못했습니다. 잠시 후 새로고침해 주세요.</div>'
-    + '<div style="margin-top:6px;font-size:13px">Could not load the latest status. Please refresh in a moment.</div>'
-    + '</div>';
+  $('board').innerHTML = '<div class="card"><div class="empty">'
+    + '현황 데이터를 불러오지 못했습니다. build_site.py 를 다시 실행해 주세요.</div></div>';
 }
+
 async function boot(){
-  if(!DATA){
-    try{
-      const res = await fetch(DATAFILE + '?t=' + Date.now(), {cache:'no-store'});
-      if(!res.ok) throw new Error(res.status);
-      DATA = await res.json();
-    }catch(e){ stamp.textContent = '—'; fail(); return; }
-  }
-  stamp.textContent = DATA.stamp;
-  setLang('ko');
+  let D = null;
+  try{                                    // 1순위: 최신 JSON (GitHub 게시 시)
+    const res = await fetch(DATAFILE + '?t=' + Date.now(), {cache:'no-store'});
+    if(res.ok){ const j = await res.json(); if(j && j.days) D = j; }
+  }catch(e){ /* file:// 등에서는 무시하고 내장 데이터 사용 */ }
+  if(!D && EMBED && EMBED.days) D = EMBED;   // 2순위: HTML 내장 데이터
+  if(!D){ fail(); return; }
+
+  $('evt').textContent = '놀페스티벌';
+  $('period').textContent = D.period || '—';
+  $('venue').textContent = D.venue || '—';
+  $('cap').textContent = (D.capacity || 40) + '인승 대형버스';
+  $('stamp').textContent = D.stamp || '—';
+  document.title = `놀페스티벌 셔틀 예약 현황 (${D.stamp})`;
+
+  kpi(D);
+  $('board').innerHTML = D.days.map(d=>dayCard(D,d)).join('') + grandCard(D);
+  countries(D);
 }
 boot();
 </script>
